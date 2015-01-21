@@ -1,0 +1,31 @@
+﻿@model List<GamingSite.ViewModels.Result>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@foreach (var item in Model)
+{
+    <tr>
+        <td><b>[@Html.DisplayFor(modelitem => item.League)]</b></td>
+        <td><b>@Html.DisplayFor(modelitem => item.TeamOneName)</b></td>
+        <td><b> vs </b></td>
+        <td><b>@Html.DisplayFor(modelitem => item.TeamTwoName):</b></td>
+    </tr>
+    <br />
+
+    for (int i = 0; i < item.Maps.Count; i++)
+    {
+        <tr>
+            <td>@Html.DisplayFor(m => item.Maps[i]):</td>
+            <td>@Html.DisplayFor(m => item.TeamOneScores[i])</td>
+            <td>-</td>
+            <td>@Html.DisplayFor(m => item.TeamTwoScores[i])</td>
+        </tr>
+        <br />
+    }
+
+    <br />
+    <br />
+}

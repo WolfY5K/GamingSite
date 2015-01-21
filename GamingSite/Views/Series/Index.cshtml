@@ -1,0 +1,69 @@
+﻿@model IEnumerable<GamingSite.Models.Series>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TeamOneID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TeamTwoID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MatchOneID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MatchTwoID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MatchThreeID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MatchFourID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MatchFiveID)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.TeamOneID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TeamTwoID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MatchOneID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MatchTwoID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MatchThreeID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MatchFourID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MatchFiveID)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.SeriesID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.SeriesID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.SeriesID })
+        </td>
+    </tr>
+}
+
+</table>

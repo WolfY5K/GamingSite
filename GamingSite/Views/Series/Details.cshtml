@@ -1,0 +1,74 @@
+﻿@model GamingSite.Models.Series
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Series</h4>
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TeamOneID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TeamOneID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TeamTwoID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TeamTwoID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MatchOneID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MatchOneID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MatchTwoID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MatchTwoID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MatchThreeID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MatchThreeID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MatchFourID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MatchFourID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MatchFiveID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MatchFiveID)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.SeriesID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
