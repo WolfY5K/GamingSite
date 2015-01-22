@@ -23,7 +23,7 @@ namespace GamingSite.Controllers
             foreach (var s in db.SeriesCollection)
             {
                 //Grab all matches in the current series
-                var matches = db.Matches.Where(m => m.SeriesCollectionID == s.SeriesID).ToList();
+                var matches = db.Matches.Where(m => m.SeriesID == s.SeriesID).ToList();
 
                 modelList.Add(new Result
                 {
@@ -45,6 +45,12 @@ namespace GamingSite.Controllers
             return View(modelList);
         }
 
+        /// <summary>
+        /// Sum and Populate the scores for team one in this series.
+        /// </summary>
+        /// <param name="result"></param>
+        /// <param name="matches"></param>
+        /// <param name="s"></param>
         private void PopulateTeamTwoScores(Result result, List<Match> matches, Series s)
         {
             foreach (var match in matches)
@@ -60,6 +66,12 @@ namespace GamingSite.Controllers
             }
         }
 
+        /// <summary>
+        /// Sum and Populate the scores for team two in this series.
+        /// </summary>
+        /// <param name="result"></param>
+        /// <param name="matches"></param>
+        /// <param name="s"></param>
         private void PopulateTeamOneScores(Result result, List<Match> matches, Series s)
         {
             foreach (var match in matches)

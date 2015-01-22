@@ -8,7 +8,7 @@ namespace GamingSite.Models
     public class Match
     {
         public int MatchID { get; set; }
-        public int SeriesCollectionID { get; set; }
+        public int SeriesID { get; set; }
         public Map Map { get; set; }
         public int CTFirstTeamID { get; set; }
         public int CTFH { get; set; }
@@ -16,6 +16,5 @@ namespace GamingSite.Models
         public int CTSH { get; set; }
         public int TSH { get; set; }
 
-        public virtual ICollection<Series> SeriesCollection { get; set; }
     }
 }

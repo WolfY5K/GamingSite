@@ -47,7 +47,7 @@ namespace GamingSite.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include="MatchID,SeriesCollectionID,Map,CTFirstTeamID,CTFH,TFH,CTSH,TSH")] Match match)
+        public ActionResult Create([Bind(Include="MatchID,SeriesID,Map,CTFirstTeamID,CTFH,TFH,CTSH,TSH")] Match match)
         {
             if (ModelState.IsValid)
             {
@@ -79,7 +79,7 @@ namespace GamingSite.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include="MatchID,SeriesCollectionID,Map,CTFirstTeamID,CTFH,TFH,CTSH,TSH")] Match match)
+        public ActionResult Edit([Bind(Include="MatchID,SeriesID,Map,CTFirstTeamID,CTFH,TFH,CTSH,TSH")] Match match)
         {
             if (ModelState.IsValid)
             {
